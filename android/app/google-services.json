@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "99718587655",
+    "firebase_url": "https://rede-vizinha-default-rtdb.firebaseio.com",
+    "project_id": "rede-vizinha",
+    "storage_bucket": "rede-vizinha.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:99718587655:android:b99f6b0d7ff9b84fb711a2",
+        "android_client_info": {
+          "package_name": "com.example.rede_vizinha_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAXzF1ObyWkWVAZ7U6fVjauNmzBoAUCGqo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
