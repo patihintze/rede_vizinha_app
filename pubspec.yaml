@@ -15,6 +15,7 @@ dependencies:
   cloud_firestore: ^4.5.0
   http: ^0.13.5
   flutter_multi_formatter: ^2.1.0
+  flutter_svg: ^2.0.9
 
 dev_dependencies:
   flutter_test:
@@ -23,6 +24,13 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+
+  assets:
+    - assets/fonts/Edu/
+    - assets/fonts/Roboto/
+    - assets/fonts/Tektur/
+    - assets/images/
+
   fonts:
     - family: Roboto
       fonts:

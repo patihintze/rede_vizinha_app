@@ -1,12 +1,15 @@
+// lib/views/home_view.dart
+
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
 import 'package:get/instance_manager.dart';
+import 'package:rede_vizinha_app/controllers/auth_controller.dart'; // 1. Adicione este import
 import 'package:rede_vizinha_app/widgets/search_bar.dart' as custom_widgets;
-import '../controllers/home_controller.dart';
-import '../widgets/category_card.dart';
-import '../widgets/bottom_nav.dart';
-import '../theme/colors.dart';
-import '../theme/text_styles.dart';
+import '../../controllers/home_controller.dart';
+import '../../widgets/category_card.dart';
+import '../../widgets/bottom_nav.dart';
+import '../../theme/colors.dart';
+import '../../theme/text_styles.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
@@ -18,6 +21,7 @@ class HomeView extends StatefulWidget {
 class _HomeViewState extends State<HomeView> {
   final TextEditingController _searchController = TextEditingController();
   final HomeController controller = Get.find<HomeController>();
+  final authController = AuthController();
 
   @override
   Widget build(BuildContext context) {
@@ -40,7 +44,17 @@ class _HomeViewState extends State<HomeView> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    const SizedBox(width: 40),
+                    IconButton(
+                      onPressed: () {
+                        authController.signOut();
+                      },
+                      tooltip: 'Sair',
+                      icon: const Icon(
+                        Icons.logout,
+                        color: Colors.white,
+                        size: 28,
+                      ),
+                    ),
                     Text('Rede Vizinha', style: AppTextStyles.headline1),
                     IconButton(
                       onPressed: () {},
@@ -58,7 +72,6 @@ class _HomeViewState extends State<HomeView> {
             ),
           ),
 
-          // Conteúdo
           Expanded(
             child: Obx(() {
               return GridView.builder(
