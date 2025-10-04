@@ -5,7 +5,6 @@ import '../models/user_model.dart';
 class NeighborsController extends GetxController {
   final FirebaseFirestore _fire = FirebaseFirestore.instance;
 
-  /// Stream que emite a lista atualizada de usuários ordenada por nome
   Stream<List<UserModel>> get usersStream {
     return _fire
         .collection('users')
@@ -17,7 +16,6 @@ class NeighborsController extends GetxController {
         );
   }
 
-  /// função de busca simples por nome (pode ser usada pra filtrar localmente)
   List<UserModel> filterByName(List<UserModel> list, String query) {
     if (query.trim().isEmpty) return list;
     final q = query.toLowerCase();

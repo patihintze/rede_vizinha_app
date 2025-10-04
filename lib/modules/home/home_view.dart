@@ -1,8 +1,6 @@
-// lib/views/home_view.dart
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:rede_vizinha_app/controllers/auth_controller.dart'; // 1. Adicione este import
+import 'package:rede_vizinha_app/controllers/auth_controller.dart';
 import 'package:rede_vizinha_app/widgets/search_bar.dart' as custom_widgets;
 import '../../controllers/home_controller.dart';
 import '../../widgets/category_card.dart';

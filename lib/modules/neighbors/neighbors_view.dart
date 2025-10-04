@@ -79,8 +79,6 @@ class _NeighborsViewState extends State<NeighborsView> {
                 }
                 return RefreshIndicator(
                   onRefresh: () async {
-                    // apenas reavalia o stream; Firestore snapshots são em tempo real
-                    // para forçar refresh, você poderia re-query, mas aqui apenas espera um tick
                     await Future.delayed(const Duration(milliseconds: 300));
                   },
                   child: ListView.separated(
@@ -95,12 +93,9 @@ class _NeighborsViewState extends State<NeighborsView> {
                       return NeighborCard(
                         user: user,
                         onTap: () {
-                          // exemplo: abrir detalhes do usuário
                           Get.toNamed('/neighbor_detail', arguments: user.uid);
                         },
-                        onLongPress: () {
-                          // ação opcional: copiar e-mail, abrir contato, etc.
-                        },
+                        onLongPress: () {},
                       );
                     },
                   ),

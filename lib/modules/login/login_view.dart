@@ -35,7 +35,6 @@ class LoginView extends StatelessWidget {
               Text('Login', style: AppTextStyles.headline1),
               const SizedBox(height: 20),
 
-              // Email
               Align(
                 alignment: Alignment.centerLeft,
                 child: Text(
@@ -55,7 +54,6 @@ class LoginView extends StatelessWidget {
               ),
               const SizedBox(height: 18),
 
-              // Senha
               Align(
                 alignment: Alignment.centerLeft,
                 child: Text(
