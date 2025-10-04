@@ -132,6 +132,7 @@ class LoginView extends StatelessWidget {
                           'Erro',
                           err,
                           backgroundColor: Colors.white.withOpacity(0.9),
+                          colorText: Colors.red,
                         );
                       }
                     },

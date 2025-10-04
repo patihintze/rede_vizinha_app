@@ -1,8 +1,7 @@
 // lib/views/home_view.dart
 
 import 'package:flutter/material.dart';
-import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
-import 'package:get/instance_manager.dart';
+import 'package:get/get.dart';
 import 'package:rede_vizinha_app/controllers/auth_controller.dart'; // 1. Adicione este import
 import 'package:rede_vizinha_app/widgets/search_bar.dart' as custom_widgets;
 import '../../controllers/home_controller.dart';
@@ -91,7 +90,65 @@ class _HomeViewState extends State<HomeView> {
                   return CategoryCard(
                     icon: c.icon,
                     label: c.title,
-                    onTap: () => controller.openCategory(c.id),
+                    onTap: () {
+                      if (c.id == '1') {
+                        Get.toNamed('/neighbors');
+                        return;
+                      }
+                      if (c.id == '2') {
+                        Get.toNamed('/coleta');
+                        return;
+                      }
+                      if (c.id == '3') {
+                        Get.snackbar(
+                          'Em breve',
+                          'Área em construção',
+                          backgroundColor: Colors.white.withOpacity(0.9),
+                          colorText: Colors.black,
+                        );
+                      }
+                      if (c.id == '4') {
+                        Get.snackbar(
+                          'Em breve',
+                          'Área em construção',
+                          backgroundColor: Colors.white.withOpacity(0.9),
+                          colorText: Colors.black,
+                        );
+                      }
+                      if (c.id == '5') {
+                        Get.snackbar(
+                          'Em breve',
+                          'Área em construção',
+                          backgroundColor: Colors.white.withOpacity(0.9),
+                          colorText: Colors.black,
+                        );
+                      }
+                      if (c.id == '6') {
+                        Get.snackbar(
+                          'Em breve',
+                          'Área em construção',
+                          backgroundColor: Colors.white.withOpacity(0.9),
+                          colorText: Colors.black,
+                        );
+                      }
+                      if (c.id == '7') {
+                        Get.snackbar(
+                          'Em breve',
+                          'Área em construção',
+                          backgroundColor: Colors.white.withOpacity(0.9),
+                          colorText: Colors.black,
+                        );
+                      }
+                      if (c.id == '8') {
+                        Get.snackbar(
+                          'Em breve',
+                          'Área em construção',
+                          backgroundColor: Colors.white.withOpacity(0.9),
+                          colorText: Colors.black,
+                        );
+                      }
+                      controller.openCategory(c.id);
+                    },
                   );
                 },
               );
